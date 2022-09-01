@@ -98,11 +98,7 @@ onMounted(() => {
         >
           <label>
             <input type="checkbox" v-model="todo.done" />
-            <span
-              :class="`bubble ${
-                todo.category === 'business' ? 'business' : 'personal'
-              }`"
-            ></span>
+            <span :class="`bubble ${todo.category}`"></span>
           </label>
         </div>
       </div>
