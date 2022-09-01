@@ -9,7 +9,7 @@ const input_category = ref(null);
 
 const todos_asc = computed(() =>
   todos.value.sort((a, b) => {
-    return (a.createdAt = b.createdAt);
+    return (b.createdAt = a.createdAt);
   })
 );
 
@@ -86,5 +86,7 @@ onMounted(() => {
         <input type="submit" value="Add todo" />
       </form>
     </section>
+
+    {{ todos_asc }}
   </main>
 </template>
