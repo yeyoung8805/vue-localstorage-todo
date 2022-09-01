@@ -25,6 +25,10 @@ const addTodo = () => {
   });
 };
 
+const removeTodo = (todo) => {
+  todos.value = todos.value.filter((t) => t !== todo);
+};
+
 watch(
   todos,
   (newVal) => {
@@ -102,6 +106,9 @@ onMounted(() => {
           </label>
           <div class="todo-content">
             <input type="text" v-model="todo.content" />
+          </div>
+          <div class="actions">
+            <button class="delete" @click="removeTodo(todo)">Delete</button>
           </div>
         </div>
       </div>
