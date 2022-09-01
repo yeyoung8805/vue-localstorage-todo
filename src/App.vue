@@ -12,6 +12,14 @@ const todos_asc = computed(() =>
     return (a.createdAt = b.createdAt);
   })
 );
+
+watch(name, (newVal) => {
+  localStorage.setItem("name", newVal);
+});
+
+onMounted(() => {
+  name.value = localStorage.getItem("name") || "";
+});
 </script>
 
 <template>
