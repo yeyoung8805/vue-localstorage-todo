@@ -40,6 +40,7 @@ onMounted(() => {
           placeholder="e.g. make a video"
           v-model="input_content"
         />
+
         <h4>Pick a category</h4>
         <div class="options">
           <label>
@@ -62,8 +63,9 @@ onMounted(() => {
             <span class="bubble personal"></span>
             <div>Personal</div>
           </label>
-          {{ input_category }}
         </div>
+
+        <input type="submit" value="Add todo" />
       </form>
     </section>
   </main>
