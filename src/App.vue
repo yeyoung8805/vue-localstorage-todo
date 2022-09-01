@@ -13,7 +13,12 @@ const todos_asc = computed(() =>
   })
 );
 
-const addTodo = () => {};
+const addTodo = () => {
+  if (input_content.value.trim() === "" || input_category.value === null) {
+    return;
+  }
+  console.log("add Todo");
+};
 
 watch(name, (newVal) => {
   localStorage.setItem("name", newVal);
